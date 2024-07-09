@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/output.css">
     <title>Hungry Burguer</title>
@@ -30,6 +31,52 @@
     </h2>
 
     <!-- Inicio Menu -->
-    
+    <div id="menu">
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 mx-auto max-w-7xl">
+            <!-- Produtos Item -->
+            <div class="flex gap-2">
+                <img src="assets/img/hamb-1.png" alt="hamburguer SMASH" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hamburguer Smash</p>
+                    <p class="text-sm ">Pão dourado, com queijo prato, molho da casa e dois burguer de 180g!</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 22.30</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="22.30">
+                            <i class="fa-solid fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Fim Produtos Item -->
+
+            <!-- Produtos Item -->
+            <div class="flex gap-2">
+                <img src="assets/img/hamb-2.png" alt="hamburguer Bacon" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+            
+                <div>
+                    <p class="font-bold">Hamburguer Bacon</p>
+                    <p class="text-sm ">Pão tostado, com queijo, bacon, molho da casa e dois burguer de 220g!</p>
+            
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 28.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                        data-name="Hamburguer Bacon" data-price="28.50">
+                            <i class="fa-solid fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            
+            </div>
+             <!-- Fim Produtos Item -->
+        </main>
+
+    </div>
+
+
+    <!-- Fim Menu -->
 </body>
 </html>
