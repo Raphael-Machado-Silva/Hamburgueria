@@ -2,9 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: #f6f7f8;
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Remover rolagem horizontal, mas permitir rolagem vertical */
+html, body {
+    height: 100%; /* Garante que o corpo ocupe 100% da altura da tela */
+    width: 100%;  /* Garante que o corpo ocupe 100% da largura da tela */
+    margin: 0;    /* Remove margens padrão */
+    padding: 0;   /* Remove espaçamento padrão */
+    overflow-x: hidden; /* Remove a rolagem horizontal */
 }
+
+/* Definir o conteúdo para se ajustar à tela */
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: scroll; /* Permite a rolagem vertical */
+}
+
 
 .header{
     width: 100%;
@@ -18,4 +38,92 @@ body{
     align-items: center;
     color: white; /* Cor do texto no header */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto para melhor contraste */
+}
+/* Estilos para o banner com a imagem de fundo */
+/* Estilos para o banner */
+/* Estilos para o banner */
+/* Estilos para o banner */
+.banner {
+    color: white;
+    position: relative;  /* Garante que o conteúdo dentro da div será posicionado sobre a imagem de fundo */
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%), /* Gradiente para escurecer mais à direita */
+        url('../assets/img/newBurguer.jpg'); /* Caminho da imagem de fundo */
+    background-size: cover;  /* Faz a imagem cobrir toda a área do banner */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Impede que a imagem se repita */
+    height: 42vh;  /* Ajuste a altura conforme necessário */
+    width: 100%;  /* A largura vai ocupar 100% da tela */
+    display: flex;  /* Usando flexbox */
+    justify-content: center;  /* Alinha o conteúdo ao centro */
+    align-items: center;  /* Alinha verticalmente no centro */
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+}
+
+/* Posiciona a logo no canto superior direito */
+.logotipo {
+    position: absolute;  /* Para posicionar a logo em relação ao banner */
+    top: 0px;  /* Distância do topo */
+    left: 0px;  /* Distância da direita */
+}
+
+/* Estilo da imagem dentro da logotipo */
+.logotipo img {
+    cursor: pointer;
+    width: 150px;  /* Define a largura da logo */
+}
+
+/* Estilos para o Slogan */
+.infoSlogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: -58%;  /* Adiciona um espaçamento à direita */
+    font-size: 1.6em;
+    color: #DE2221;  /* Cor do texto do slogan */
+}
+
+/* Estilos para o conteúdo adicional (ex: service - delivery - express) */
+.infos {
+    margin-top: 10px;  /* Adiciona um espaço entre o slogan e as informações */
+    font-size: 1.2em;  /* Ajuste o tamanho da fonte conforme necessário */
+    color: #D69A2A;
+}
+
+
+/* Estilos para a seção de horários e botão WhatsApp */
+.temp {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 5%;
+    width: 100%;
+}
+
+/* Estilo para o botão do WhatsApp */
+.whatsapp {
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+}
+
+.whatsapp i{
+    font-size: 1.8em;
+    color: black;
+    transition: .3s;
+}
+
+/* Efeito hover para o botão do WhatsApp */
+.whatsapp i:hover {
+    color: #36D452;
+    font-size: 1.9em;
 }
