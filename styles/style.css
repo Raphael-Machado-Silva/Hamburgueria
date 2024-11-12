@@ -128,13 +128,53 @@ body {
     font-size: 1.9em;
 }
 
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10vh 0;
+    gap: 5%;
+}
 
+.nav-option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.nav-option h2{
+    font-size: 1.4em;
+    font-family: "Anton SC", sans-serif;
+}
+
+.nav-option p{
+    text-indent: 10px;
+    text-align: center;
+}
+
+.nav-option button{
+    background-color: #842222;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px;
+    font-weight: normal;
+}
+
+.nav-option button:hover{
+    color: #842222;
+    background-color: white;
+    border: 1px solid #842222;
+}
 
 
 
 .image-gallery {
     display: flex;
     justify-content: space-between;
+    margin: 12vh 0;
 }
 
 .image-item {
