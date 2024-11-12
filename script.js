@@ -158,3 +158,14 @@ if(isOpen){
     spanItem.classList.remove("bg-green-500")
     spanItem.classList.add("bg-red-600")
 }
+
+// Função para mover a imagem com a rolagem
+window.addEventListener('scroll', function() {
+    const img = document.getElementById('entregador');
+    
+    // Obtenha a quantidade de rolagem na página
+    const scrollY = window.scrollY;
+    
+    // Aplique a transformação na imagem
+    img.style.transform = `translateX(${scrollY / 5}px)`; // Ajuste a velocidade do movimento dividindo o scrollY por um valor
+});

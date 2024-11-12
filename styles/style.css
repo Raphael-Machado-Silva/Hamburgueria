@@ -7,6 +7,8 @@
 /* Importando a fonte Poppins do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&display=swap');
+
 /* Remover rolagem horizontal, mas permitir rolagem vertical */
 html, body {
     height: 100%; /* Garante que o corpo ocupe 100% da altura da tela */
@@ -209,4 +211,109 @@ body {
 
 .image-gallery:hover .image-item:not(:hover) img {
     filter: brightness(0.5); /* Escurece as imagens que não estão em foco */
+}
+
+.title{
+    font-family: "Permanent Marker";
+}
+
+
+
+/* Localização */
+/* Configuração geral da seção */
+/* Efeito Parallax */
+.location-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20vh 0;
+    width: 100%;
+    height: 55vh;
+    flex-wrap: wrap;
+    position: relative; /* Necessário para o pseudo-elemento */
+    background-image: url('../assets/img/cidade.jpg'); /* Adicionando a imagem de fundo */
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Efeito parallax */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+
+/* Sobreposição escura */
+.location-section::before {
+    content: ''; /* Necessário para criar o pseudo-elemento */
+    position: absolute; /* Posiciona sobre a imagem de fundo */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.63); /* Cor preta com 50% de opacidade */
+    z-index: 1; /* Garante que o overlay fique sobre a imagem */
+}
+
+.location-text, .location-map {
+    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
+}
+
+
+/* Outras configurações de estilo */
+.title-local {
+    margin: 18vh 0 2vh 0;
+    font-family: "Permanent Marker", cursive;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.location-text {
+    width: 60%;
+    height: 100%;
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-map {
+    width: 35%;
+    margin-right: 5%;
+    height: 80%;
+    position: relative;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 0;
+}
+
+.img-localização{
+    margin-top: 30px;
+    border-radius: 50%;
+}
+.p-localização{
+    max-width: 450px;
+    text-align: center;
+    font-size: 1.1em;
+}
+p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Responsividade: Ajustando o layout para telas menores */
+@media (max-width: 768px) {
+    .location-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .location-text {
+        width: 100%;
+    }
+    .location-map {
+        width: 100%;
+        height: 250px;
+    }
 }
