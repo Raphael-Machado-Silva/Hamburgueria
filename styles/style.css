@@ -127,3 +127,46 @@ body {
     color: #36D452;
     font-size: 1.9em;
 }
+
+
+
+
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-item {
+    flex: 1;
+    overflow: hidden;
+    transition: flex 0.3s ease;
+    position: relative; /* Necessário para garantir que o zoom fique dentro dos limites do contêiner */
+    height: 55vh; /* Define uma altura padrão para todas as imagens */
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta a imagem para preencher o contêiner sem distorção */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transform-origin: center; /* Centraliza o ponto de crescimento */
+}
+
+/* Efeito ao passar o mouse */
+.image-item:hover {
+    flex: 1.5; /* Aumenta a imagem em foco */
+}
+
+.image-item:hover img {
+    transform: scale(1.1); /* Dá zoom na imagem em foco */
+}
+
+/* Diminuir e escurecer as outras imagens */
+.image-gallery:hover .image-item:not(:hover) {
+    flex: 0.8; /* Diminui as imagens que não estão em foco */
+}
+
+.image-gallery:hover .image-item:not(:hover) img {
+    filter: brightness(0.5); /* Escurece as imagens que não estão em foco */
+}
