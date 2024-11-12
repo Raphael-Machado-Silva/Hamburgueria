@@ -159,13 +159,29 @@ if(isOpen){
     spanItem.classList.add("bg-red-600")
 }
 
-// Função para mover a imagem com a rolagem
-window.addEventListener('scroll', function() {
-    const img = document.getElementById('entregador');
-    
-    // Obtenha a quantidade de rolagem na página
-    const scrollY = window.scrollY;
-    
-    // Aplique a transformação na imagem
-    img.style.transform = `translateX(${scrollY / 5}px)`; // Ajuste a velocidade do movimento dividindo o scrollY por um valor
-});
+
+
+// Seleciona os elementos
+const cartButton = document.getElementById('cart-btn');
+const menuSection = document.querySelector('#menu'); // Altere '#menu' para o ID da seção de menu
+
+// Configuração para o Intersection Observer
+const observerOptions = {
+    root: null,
+    threshold: 0.1 // Altere conforme necessário para definir quanto do menu deve estar visível
+};
+
+// Cria o observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // Exibe o botão do carrinho quando o menu está visível
+        if (entry.isIntersecting) {
+            cartButton.parentElement.style.display = 'flex';
+        } else {
+            cartButton.parentElement.style.display = 'none';
+        }
+    });
+}, observerOptions);
+
+// Observa a seção de menu
+observer.observe(menuSection);
