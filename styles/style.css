@@ -458,6 +458,7 @@ p {
     flex-direction: column;
     padding: 0;
     border-bottom: 2px solid black;
+    background-color: #842222;
 }
 
 .menu_container{
@@ -472,11 +473,11 @@ p {
     width: 100vw;
 }
 
-.item{
+div.item{
     border: 1px solid black;
     padding: 10px;
-    background-color: #8422222f;
     border-radius: 10px;
+    background-color: #ff9933;
 }
 
 .bebidas_div{
