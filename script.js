@@ -89,7 +89,9 @@ function updateCartModal(){
         currency: "BRL"
     })
 
-    cartCounter.innerText = cart.length // colocando a quantidade
+   // Contabiliza a quantidade total de itens no carrinho
+   const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+   cartCounter.innerText = totalQuantity // Atualiza o contador de itens com a quantidade total
 }
 
 // REMOVER ITEM DO CARRINHO

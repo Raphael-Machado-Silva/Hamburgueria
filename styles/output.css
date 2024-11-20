@@ -3181,11 +3181,25 @@ p {
 
 #menu{
   margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 0;
+  border-bottom: 2px solid black;
+}
+
+.menu_container{
+  width: 100%;
 }
 
 #menu h2{
   color: white;
+}
+
+.title_menu{
+  width: 100vw;
 }
 
 .item{
@@ -3193,6 +3207,24 @@ p {
   padding: 10px;
   background-color: #8422222f;
   border-radius: 10px;
+}
+
+.bebidas_div{
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bebidas_div .item{
+  width: 700px;
+}
+
+.bebidas_div img{
+  margin-left: 10px;
 }
 
 @media (min-width: 640px) {
