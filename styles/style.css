@@ -448,3 +448,19 @@ p {
     font-size: 0.85em;
     color: #ddd;
 }
+
+#menu{
+    margin: 0;
+    padding: 0;
+}
+
+#menu h2{
+    color: white;
+}
+
+.item{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #8422222f;
+    border-radius: 10px;
+}

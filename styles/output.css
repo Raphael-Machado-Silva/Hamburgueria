@@ -766,6 +766,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -893,10 +897,6 @@ video {
   height: 8rem;
 }
 
-.h-\[420px\] {
-  height: 420px;
-}
-
 .h-full {
   height: 100%;
 }
@@ -935,6 +935,10 @@ video {
 
 .flex-shrink {
   flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .shrink {
@@ -1459,6 +1463,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-7 {
   gap: 1.75rem;
 }
@@ -1779,14 +1787,6 @@ video {
   border-radius: 0.25rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -1924,6 +1924,16 @@ video {
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
+.bg-\[\#842222\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 34 34 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ff9933\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 153 51 / var(--tw-bg-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -1963,15 +1973,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-zinc-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-}
-
-.bg-home {
-  background-image: url('/assets/img/bg.png');
-}
-
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -1990,10 +1991,6 @@ video {
 .box-decoration-clone {
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
-}
-
-.bg-cover {
-  background-size: cover;
 }
 
 .bg-fixed {
@@ -2023,10 +2020,6 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .bg-repeat {
@@ -2098,6 +2091,10 @@ video {
   padding: 1.25rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2121,6 +2118,10 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-left {
@@ -2187,11 +2188,6 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-lg {
@@ -2493,12 +2489,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2609,10 +2599,6 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-200 {
-  transition-duration: 200ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -2679,12 +2665,534 @@ video {
   forced-color-adjust: none;
 }
 
-body{
-  background-color: #f6f7f8;
+/* Importando a fonte Poppins do Google Fonts */
+
+/* Remover rolagem horizontal, mas permitir rolagem vertical */
+
+html, body {
+  height: 100%;
+  /* Garante que o corpo ocupe 100% da altura da tela */
+  width: 100%;
+  /* Garante que o corpo ocupe 100% da largura da tela */
+  margin: 0;
+  /* Remove margens padrão */
+  padding: 0;
+  /* Remove espaçamento padrão */
+  overflow-x: hidden;
+  /* Remove a rolagem horizontal */
 }
 
-.home{
-  background-image: ;
+/* Definir o conteúdo para se ajustar à tela */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  /* Permite a rolagem vertical */
+}
+
+.header{
+  width: 100%;
+  height: 300px;
+  /* Defina a altura que desejar */
+  background-image: url('//assets/img/bg.png');
+  background-size: cover;
+  /* A imagem cobrirá todo o header sem distorcer */
+  background-position: center;
+  /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  /* Evita que a imagem se repita */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* Cor do texto no header */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  /* Adiciona sombra ao texto para melhor contraste */
+}
+
+/* Estilos para o banner com a imagem de fundo */
+
+/* Estilos para o banner */
+
+/* Estilos para o banner */
+
+/* Estilos para o banner */
+
+.banner {
+  color: white;
+  position: relative;
+  /* Garante que o conteúdo dentro da div será posicionado sobre a imagem de fundo */
+  background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%), /* Gradiente para escurecer mais à direita */
+        url('../assets/img/newBurguer.jpg');
+  /* Caminho da imagem de fundo */
+  background-size: cover;
+  /* Faz a imagem cobrir toda a área do banner */
+  background-position: center;
+  /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  /* Impede que a imagem se repita */
+  height: 42vh;
+  /* Ajuste a altura conforme necessário */
+  width: 100%;
+  /* A largura vai ocupar 100% da tela */
+  display: flex;
+  /* Usando flexbox */
+  justify-content: center;
+  /* Alinha o conteúdo ao centro */
+  align-items: center;
+  /* Alinha verticalmente no centro */
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+}
+
+/* Posiciona a logo no canto superior direito */
+
+.logotipo {
+  position: absolute;
+  /* Para posicionar a logo em relação ao banner */
+  top: 0px;
+  /* Distância do topo */
+  left: 0px;
+  /* Distância da direita */
+}
+
+/* Estilo da imagem dentro da logotipo */
+
+.logotipo img {
+  cursor: pointer;
+  width: 150px;
+  /* Define a largura da logo */
+}
+
+/* Estilos para o Slogan */
+
+.infoSlogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: -58%;
+  /* Adiciona um espaçamento à direita */
+  font-size: 1.6em;
+  color: #DE2221;
+  /* Cor do texto do slogan */
+}
+
+/* Estilos para o conteúdo adicional (ex: service - delivery - express) */
+
+.infos {
+  margin-top: 10px;
+  /* Adiciona um espaço entre o slogan e as informações */
+  font-size: 1.2em;
+  /* Ajuste o tamanho da fonte conforme necessário */
+  color: #D69A2A;
+}
+
+/* Estilos para a seção de horários e botão WhatsApp */
+
+.temp {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 5%;
+  width: 100%;
+}
+
+/* Estilo para o botão do WhatsApp */
+
+.whatsapp {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+}
+
+.whatsapp i{
+  font-size: 1.8em;
+  color: black;
+  transition: .3s;
+}
+
+/* Efeito hover para o botão do WhatsApp */
+
+.whatsapp i:hover {
+  color: #36D452;
+  font-size: 1.9em;
+}
+
+.nav-bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10vh 0;
+  gap: 5%;
+}
+
+.nav-option{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.nav-option h2{
+  font-size: 1.4em;
+  font-family: "Anton SC", sans-serif;
+}
+
+.nav-option p{
+  text-indent: 10px;
+  text-align: center;
+}
+
+.nav-option button{
+  background-color: #842222;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px;
+  font-weight: normal;
+}
+
+.nav-option button:hover{
+  color: #842222;
+  background-color: white;
+  border: 1px solid #842222;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin: 12vh 0;
+}
+
+.image-item {
+  flex: 1;
+  overflow: hidden;
+  transition: flex 0.3s ease;
+  position: relative;
+  /* Necessário para garantir que o zoom fique dentro dos limites do contêiner */
+  height: 55vh;
+  /* Define uma altura padrão para todas as imagens */
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* Corta a imagem para preencher o contêiner sem distorção */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transform-origin: center;
+  /* Centraliza o ponto de crescimento */
+}
+
+/* Efeito ao passar o mouse */
+
+.image-item:hover {
+  flex: 1.5;
+  /* Aumenta a imagem em foco */
+}
+
+.image-item:hover img {
+  transform: scale(1.1);
+  /* Dá zoom na imagem em foco */
+}
+
+/* Diminuir e escurecer as outras imagens */
+
+.image-gallery:hover .image-item:not(:hover) {
+  flex: 0.8;
+  /* Diminui as imagens que não estão em foco */
+}
+
+.image-gallery:hover .image-item:not(:hover) img {
+  filter: brightness(0.5);
+  /* Escurece as imagens que não estão em foco */
+}
+
+.title{
+  font-family: "Permanent Marker";
+}
+
+.sobre{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 55vh;
+  background-color: #842222;
+  margin: 20vh 0 20vh 0;
+  color: white;
+}
+
+.sobre-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  max-width: 400px;
+  height: 90%;
+}
+
+.sobre-img img{
+  width: 72%;
+  border-radius: 20px;
+}
+
+.sobre-info{
+  padding: 10px;
+  width: 60%;
+  max-width: 500px;
+  margin-left: 3%;
+}
+
+.linha-titulo {
+  width: 20%;
+  max-width: 100px;
+  /* Ajuste o comprimento da linha */
+  height: 3px;
+  /* Ajuste a espessura da linha */
+  background-color: white;
+  /* Cor da linha */
+  margin: -3px 0 10% 0;
+  /* Espaçamento entre o título e a linha */
+}
+
+.sobre-title{
+  font-family: "Anton SC", sans-serif ;
+  font-size: 2.2em;
+}
+
+.sobre-description h3{
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #D69A2A;
+}
+
+.sobre-description p{
+  text-indent: 10px;
+  font-size: 1em;
+}
+
+/* Localização */
+
+/* Configuração geral da seção */
+
+/* Efeito Parallax */
+
+.location-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 25vh 0;
+  width: 100%;
+  height: 55vh;
+  flex-wrap: wrap;
+  position: relative;
+  /* Necessário para o pseudo-elemento */
+  background-image: url('../assets/img/cidade.jpg');
+  /* Adicionando a imagem de fundo */
+  background-size: cover;
+  /* Garante que a imagem cubra toda a área */
+  background-position: center;
+  /* Centraliza a imagem */
+  background-attachment: fixed;
+  /* Efeito parallax */
+  background-repeat: no-repeat;
+  /* Não repete a imagem */
+}
+
+/* Sobreposição escura */
+
+.location-section::before {
+  content: '';
+  /* Necessário para criar o pseudo-elemento */
+  position: absolute;
+  /* Posiciona sobre a imagem de fundo */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.63);
+  /* Cor preta com 50% de opacidade */
+  z-index: 1;
+  /* Garante que o overlay fique sobre a imagem */
+}
+
+.location-text, .location-map {
+  z-index: 2;
+  /* Garante que o conteúdo fique acima do overlay */
+}
+
+/* Outras configurações de estilo */
+
+.title-local {
+  margin: 20vh 0 2vh 0;
+  font-family: "Permanent Marker", cursive;
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.location-text {
+  width: 60%;
+  height: 100%;
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.location-map {
+  width: 35%;
+  margin-right: 5%;
+  height: 80%;
+  position: relative;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 0;
+}
+
+.img-localização{
+  margin-top: 30px;
+  border-radius: 50%;
+}
+
+.p-localização{
+  max-width: 450px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Responsividade: Ajustando o layout para telas menores */
+
+@media (max-width: 768px) {
+  .location-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .location-text {
+    width: 100%;
+  }
+
+  .location-map {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.footer {
+  background-color: #842222;
+  border-top: 2px solid black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.curriculo{
+  padding-top: 35px;
+}
+
+.footer-section h4 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.footer-section ul li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 5px 0;
+}
+
+.footer-section a {
+  color: #ffcc66;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #ff9933;
+}
+
+.footer-bottom {
+  border-top: 1px solid #fff;
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 0.85em;
+  color: #ddd;
+}
+
+#menu{
+  margin: 0;
+  padding: 0;
+}
+
+#menu h2{
+  color: white;
+}
+
+.item{
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #8422222f;
+  border-radius: 10px;
 }
 
 @media (min-width: 640px) {
