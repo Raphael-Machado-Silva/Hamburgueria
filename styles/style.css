@@ -497,3 +497,32 @@ div.item{
 .bebidas_div img{
     margin-left: 10px;
 }
+
+@media (max-width: 600px) {
+    /* Estilos para dispositivos móveis */
+    .logotipo_img{
+        border-top-right-radius: 50%; /* Arredonda o canto superior direito */
+        border-bottom-right-radius: 50%; /* Arredonda o canto inferior direito */
+        scale: 0.9;
+        margin-left: -10px;
+    }
+    .infoSlogan{
+        font-size: 1em;
+        margin-left: -20%;
+        text-shadow: 2px black;
+    }
+    .nav-option{
+        max-width: 80%;
+        text-align: center;
+        font-size: 1em;
+        margin-bottom: 5vh;
+    }
+    .nav-option p{
+        margin-top: -5px;
+        font-size: 1em;
+    }
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+    }
+}
